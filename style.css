@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-dark: 15 23 42;
+    --color-darker: 2 6 23;
+    --color-card: 30 41 59;
+    --color-blue: 56 189 248;
+    --color-purple: 168 85 247;
+    --color-gray: 148 163 184;
+    --color-light: 248 250 252;
+  }
+  
+  body {
+    @apply bg-tech-darker text-tech-light font-sans antialiased selection:bg-tech-purple selection:text-white transition-colors duration-500;
+  }
+}
+
+@layer components {
+  /* Custom glassmorphism card */
+  .glass-card {
+    @apply bg-tech-card/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 transition-all duration-300;
+  }
+  .glass-card:hover {
+    @apply transform -translate-y-2 border-tech-blue/50 shadow-[0_0_20px_rgba(56,189,248,0.2)];
+  }
+
+  /* Custom tech skill tag */
+  .skill-tag {
+    @apply px-3 py-1 bg-tech-dark border border-tech-gray/20 rounded-full text-tech-gray text-sm font-mono tracking-tight transition-all duration-300;
+  }
+  .skill-tag:hover {
+    @apply text-tech-blue border-tech-blue/50 bg-tech-blue/10;
+  }
+
+  /* Timeline line styling */
+  .timeline-line {
+    @apply absolute left-0 top-2 w-px h-full bg-gradient-to-b from-tech-blue/50 via-tech-purple/50 to-transparent;
+  }
+  .timeline-dot {
+    @apply absolute -left-1.5 top-2 w-3 h-3 rounded-full bg-tech-dark border-2 border-tech-blue;
+  }
+
+  /* Neon Glowing Text */
+  .text-glow {
+    text-shadow: 0 0 15px rgb(var(--color-blue) / 0.5);
+  }
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+.nav {
+  @media (max-width: 768px) {
+  display: flex;
+  justify-content: center;
+}
+}

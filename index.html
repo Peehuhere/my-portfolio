@@ -1,560 +1,672 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Peehu - Full-Stack Developer & CS Undergraduate">
-    <title>Peehu | Software Engineer Portfolio</title>
-    <!-- Phosphor Icons for elegant minimalist icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- Devicon for language logos -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  </head>
-  <body class="relative min-h-screen overflow-x-hidden selection:bg-tech-purple/50">
 
-    <!-- Reading Progress Bar -->
-    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-tech-blue to-tech-purple w-0 z-50"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Peehu - Full-Stack Developer & CS Undergraduate">
+  <title>Peehu | Software Engineer Portfolio</title>
+  <!-- Phosphor Icons for elegant minimalist icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Devicon for language logos -->
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
 
-    <!-- Floating Navbar -->
-    <nav id="main-nav" class="fixed top-4 md:top-6 left-1/2 transform -translate-x-1/2 z-40 bg-transparent border border-transparent rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center justify-center gap-3 sm:gap-6 w-max opacity-0 animate-fade-in-up delay-200 transition-all duration-300">
-      <a href="#overview" class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span class="hidden sm:inline">Overview</span><span class="sm:hidden">Intro</span></a>
-      <a href="#skills" class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors">Skills</a>
-      <a href="#experience" class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span class="hidden sm:inline">Experience</span><span class="sm:hidden">Exp.</span></a>
-      <a href="#projects" class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors"><span class="hidden sm:inline">Projects</span><span class="sm:hidden">Proj.</span></a>
-      <a href="#contact" class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors">Contact</a>
-    </nav>
+<body class="relative min-h-screen overflow-x-hidden selection:bg-tech-purple/50">
 
-    <!-- Background Decoration -->
-    <div class="fixed inset-0 z-[-1] pointer-events-none">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-tech-blue/10 rounded-full blur-[100px]"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tech-purple/10 rounded-full blur-[100px]"></div>
-    </div>
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-tech-blue to-tech-purple w-0 z-50"></div>
 
-    <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-6 py-16 md:py-24 grid gap-16 relative z-10">
+  <!-- Floating Navbar -->
+  <nav id="main-nav"
+    class="fixed top-4 md:top-6 left-1/2 transform -translate-x-1/2 z-40 bg-transparent border border-transparent rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center justify-center gap-3 sm:gap-6 w-max opacity-0 animate-fade-in-up delay-200 transition-all duration-300">
+    <a href="#overview"
+      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span
+        class="hidden sm:inline">Overview</span><span class="sm:hidden">Intro</span></a>
+    <a href="#skills"
+      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors">Skills</a>
+    <a href="#experience"
+      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span
+        class="hidden sm:inline">Experience</span><span class="sm:hidden">Exp.</span></a>
+    <a href="#projects"
+      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors"><span
+        class="hidden sm:inline">Projects</span><span class="sm:hidden">Proj.</span></a>
+    <a href="#contact"
+      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors">Contact</a>
+  </nav>
 
-      <!-- Hero Section -->
-      <section class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 opacity-0 animate-fade-in-up">
-        
-        <!-- Text Content -->
-        <div class="flex-1 flex flex-col items-start gap-6">
-          <div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 flex items-baseline">
-              <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light via-tech-blue to-tech-purple drop-shadow-md">Peehu</span>
-              <span class="text-tech-blue animate-pulse ml-1 text-5xl">.</span>
-            </h1>
-            <h2 class="text-xl md:text-2xl text-tech-blue font-mono text-glow min-h-[32px] flex items-center">
-              <span id="typewriter-text"></span><span class="inline-block w-2.5 h-6 bg-tech-blue animate-pulse ml-1"></span>
-            </h2>
+  <!-- Background Decoration -->
+  <div class="fixed inset-0 z-[-1] pointer-events-none">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-tech-blue/10 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tech-purple/10 rounded-full blur-[100px]"></div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="max-w-5xl mx-auto px-6 py-16 md:py-24 grid gap-16 relative z-10">
+
+    <!-- Hero Section -->
+    <section class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 opacity-0 animate-fade-in-up">
+
+      <!-- Text Content -->
+      <div class="flex-1 flex flex-col items-start gap-6">
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 flex items-baseline">
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light via-tech-blue to-tech-purple drop-shadow-md">Peehu</span>
+            <span class="text-tech-blue animate-pulse ml-1 text-5xl">.</span>
+          </h1>
+          <h2 class="text-xl md:text-2xl text-tech-blue font-mono text-glow min-h-[32px] flex items-center">
+            <span id="typewriter-text"></span><span
+              class="inline-block w-2.5 h-6 bg-tech-blue animate-pulse ml-1"></span>
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap gap-4 text-tech-gray font-mono text-sm">
+          <a href="tel:+919891019397" class="flex items-center gap-2 hover:text-tech-blue transition-colors group">
+            <i class="ph ph-phone text-lg group-hover:scale-110 transition-transform"></i> +91 9891019397
+          </a>
+          <a href="mailto:pihus1412@gmail.com"
+            class="flex items-center gap-2 hover:text-tech-purple transition-colors group">
+            <i class="ph ph-envelope-simple text-lg group-hover:scale-110 transition-transform"></i> pihus1412@gmail.com
+          </a>
+          <span class="flex items-center gap-2">
+            <i class="ph ph-map-pin text-lg"></i> Dwarka, New Delhi
+          </span>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mt-2">
+          <a href="https://www.linkedin.com/in/peehu14/"
+            class="px-4 py-2 bg-tech-card hover:bg-tech-card/80 border border-white/10 rounded-lg flex items-center gap-2 transition-all">
+            <i class="ph ph-linkedin-logo text-tech-blue"></i> LinkedIn
+          </a>
+          <a href="https://github.com/Peehuhere"
+            class="px-4 py-2 bg-tech-card hover:bg-tech-card/80 border border-white/10 rounded-lg flex items-center gap-2 transition-all">
+            <i class="ph ph-github-logo text-tech-light"></i> GitHub
+          </a>
+          <a href="/resume.pdf" target="_blank" download
+            class="px-4 py-2 bg-tech-card hover:bg-tech-card/80 border border-white/10 rounded-lg flex items-center gap-2 transition-all">
+            <i class="ph ph-download-simple text-tech-purple"></i>
+            Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Slot -->
+      <div id="hero-avatar-container"
+        class="flex-shrink-0 flex items-center justify-center w-48 h-48 md:w-64 md:h-64 relative">
+        <div id="hero-avatar"
+          class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-tech-blue/30 overflow-hidden glass-card p-1 flex items-center justify-center bg-tech-dark group hover:border-tech-purple/50 z-[60]">
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-tech-blue/10 to-tech-purple/10 animate-pulse rounded-full z-0">
           </div>
-          
-          <div class="flex flex-wrap gap-4 text-tech-gray font-mono text-sm">
-            <a href="tel:+919891019397" class="flex items-center gap-2 hover:text-tech-blue transition-colors group">
-              <i class="ph ph-phone text-lg group-hover:scale-110 transition-transform"></i> +91 9891019397
-            </a>
-            <a href="mailto:pihus1412@gmail.com" class="flex items-center gap-2 hover:text-tech-purple transition-colors group">
-              <i class="ph ph-envelope-simple text-lg group-hover:scale-110 transition-transform"></i> pihus1412@gmail.com
-            </a>
-            <span class="flex items-center gap-2">
-              <i class="ph ph-map-pin text-lg"></i> Dwarka, New Delhi
+
+          <!-- Profile Image -->
+          <img src="/profile.jpg" alt="Peehu's Profile"
+            class="w-full h-full object-cover rounded-full relative z-10 shadow-[0_0_15px_rgb(var(--color-blue)/0.3)] group-hover:shadow-[0_0_25px_rgb(var(--color-purple)/0.5)] transition-all duration-500 transform group-hover:scale-105" />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Summary -->
+    <section id="overview" class="opacity-0 animate-fade-in-up delay-100 scroll-mt-28">
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+        <i class="ph ph-terminal-window text-tech-blue"></i> <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Overview</span>
+      </h3>
+      <div class="glass-card flex flex-col overflow-hidden group hover:border-tech-blue/30 transition-colors">
+        <!-- Window Header Controls -->
+        <div class="flex items-center gap-2 border-b border-white/5 pb-3 mb-4">
+          <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+          <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+          <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+          <span class="text-xs font-mono text-tech-gray/50 ml-2">about_me.js</span>
+        </div>
+        <!-- Window Content -->
+        <div
+          class="font-mono text-sm md:text-[15px] p-2 text-tech-gray leading-relaxed tracking-tight group-hover:text-tech-light transition-colors duration-500 overflow-x-auto">
+          <span class="text-tech-purple italic">const</span> <span class="text-tech-light">developer</span> = {
+          <div class="pl-6 space-y-3 my-2 border-l border-tech-darker/50">
+            <div><span class="text-tech-blue">role</span>: <span class="text-[#a6e22e]">"Aspiring Software
+                Engineer"</span>,</div>
+
+            <div><span class="text-tech-blue">focus</span>: [
+              <div class="pl-4"><span class="text-[#a6e22e]">"Data Structures & Algorithms for strong problem
+                  solving"</span>,</div>
+              <div class="pl-4"><span class="text-[#a6e22e]">"Backend development and application logic"</span>,</div>
+              <div class="pl-4"><span class="text-[#a6e22e]">"Understanding how systems work internally"</span></div>
+              ],
+            </div>
+
+            <div><span class="text-tech-blue">development</span>: [
+              <div class="pl-4"><span class="text-[#a6e22e]">"Building responsive and structured user
+                  interfaces"</span>,</div>
+              <div class="pl-4"><span class="text-[#a6e22e]">"Working with server-side logic and request
+                  handling"</span>,</div>
+              <div class="pl-4"><span class="text-[#a6e22e]">"Writing clean, readable, and maintainable code"</span>
+              </div>
+              ],
+            </div>
+
+            <div><span class="text-tech-blue">learning</span>: [
+              <div class="pl-4"><span class="text-[#a6e22e]">"Improving problem-solving through consistent
+                  practice"</span>,</div>
+              <div class="pl-4"><span class="text-[#a6e22e]">"Exploring scalable application design"</span>,</div>
+              <div class="pl-4"><span class="text-[#a6e22e]">"Strengthening core CS fundamentals"</span></div>
+              ],
+            </div>
+
+            <div class="hidden md:block"><span class="text-tech-blue">currentWork</span>: <span
+                class="text-[#a6e22e]">"Developing a dynamic portfolio generator using backend-driven
+                architecture"</span></div>
+
+            <div class="block md:hidden"><span class="text-tech-blue">currentWork</span>: <br><span
+                class="pl-4 text-[#a6e22e]">"Developing a dynamic portfolio generator using backend-driven
+                architecture"</span></div>
+          </div>
+          };
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="opacity-0 animate-fade-in-up delay-200 scroll-mt-28">
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+        <i class="ph ph-code text-tech-purple"></i> <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Technical Arsenal</span>
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card flex flex-col gap-4">
+          <h4 class="font-mono text-tech-blue text-sm border-b border-white/10 pb-2">Languages & Web</h4>
+          <div class="flex flex-wrap gap-6 mt-2 justify-center sm:justify-start">
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-javascript-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-cplusplus-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">C++</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-c-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">C</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-python-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">Python</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-html5-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">HTML5</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-css3-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">CSS3</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-2 pt-4 border-t border-white/5">
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="glass-card flex flex-col gap-4">
+          <h4 class="font-mono text-tech-purple text-sm border-b border-white/10 pb-2">Backend & Core Concept</h4>
+          <div class="flex flex-wrap gap-6 mt-2 justify-center sm:justify-start">
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-nodejs-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">Node.js</span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-2 group bg-tech-light/10 w-16 h-16 rounded-xl flex items-center justify-center hover:bg-tech-light/20 transition-colors cursor-default drop-shadow-md">
+              <i
+                class="devicon-express-original text-tech-light text-4xl group-hover:-translate-y-1 transition-transform"></i>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-mysql-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">SQL</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-2 pt-4 border-t border-white/5">
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Server-side Logic</span>
+            <span class="skill-tag">DSA</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">OOPs</span>
+          </div>
+        </div>
+
+        <div class="glass-card flex flex-col gap-4">
+          <h4 class="font-mono text-tech-gray text-sm border-b border-white/10 pb-2">Tools & Practices</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Version Control</span>
+            <span class="skill-tag">Time & Space Complexity</span>
+          </div>
+        </div>
+
+        <div class="glass-card flex flex-col gap-4">
+          <h4 class="font-mono text-tech-light text-sm border-b border-white/10 pb-2">Soft Skills</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag flex items-center gap-1.5"><i
+                class="ph-fill ph-users text-tech-purple transition-colors"></i> Leadership</span>
+            <span class="skill-tag flex items-center gap-1.5"><i
+                class="ph-fill ph-lightbulb text-tech-blue transition-colors"></i> Problem Solving</span>
+            <span class="skill-tag flex items-center gap-1.5"><i
+                class="ph-fill ph-chart-line-up text-tech-purple transition-colors"></i> Adaptability</span>
+            <span class="skill-tag flex items-center gap-1.5"><i
+                class="ph-fill ph-handshake text-tech-blue transition-colors"></i> Collaboration</span>
+            <span class="skill-tag flex items-center gap-1.5"><i
+                class="ph-fill ph-speaker-high text-tech-purple transition-colors"></i> Communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience" class="opacity-0 animate-fade-in-up delay-300 scroll-mt-28">
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+        <i class="ph ph-briefcase text-tech-blue"></i> <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Experience</span>
+      </h3>
+
+      <div class="relative pl-6 space-y-12">
+        <!-- Timeline Vertical Line -->
+        <div class="timeline-line"></div>
+
+        <!-- Yuga Yatra -->
+        <div class="relative">
+          <div class="timeline-dot"></div>
+          <div class="glass-card ml-2">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+              <div>
+                <h4 class="text-xl font-bold text-tech-light">Software Engineering Intern & HR Intern</h4>
+                <p class="text-tech-blue font-mono text-sm mt-1">Yuga Yatra</p>
+              </div>
+              <div
+                class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
+                <i class="ph ph-calendar"></i> Apr 2026 - Present
+              </div>
+            </div>
+            <ul class="space-y-3 text-tech-gray text-sm">
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
+                <span>Contributed to backend logic, routing mechanisms, and application workflow structuring</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
+                <span>Worked with Express.js for request handling and improving system flow efficiency</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
+                <span>Collaborated in cross-functional teams to enhance coordination and execution</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
+                <span>Gained exposure to real-world development practices and structured problem solving</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- HackWithIndia -->
+        <div class="relative">
+          <div class="timeline-dot"></div>
+          <div class="glass-card ml-2">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+              <div>
+                <h4 class="text-xl font-bold text-tech-light">Junior Web Developer</h4>
+                <p class="text-tech-purple font-mono text-sm mt-1">HackWithIndia</p>
+              </div>
+              <div
+                class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
+                <i class="ph ph-calendar"></i> Sept 2024 - Jan 2025
+              </div>
+            </div>
+            <ul class="space-y-3 text-tech-gray text-sm">
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
+                <span>Developed responsive web interfaces using HTML and CSS ensuring cross-device compatibility</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
+                <span>Implemented layout systems using Flexbox and CSS Grid for structured UI design</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
+                <span>Improved UI consistency through better spacing, alignment, and visual hierarchy</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
+                <span>Debugged cross-browser issues to ensure consistent rendering</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- True Stories Podcast -->
+        <div class="relative">
+          <div class="timeline-dot"></div>
+          <div class="glass-card ml-2">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+              <div>
+                <h4 class="text-xl font-bold text-tech-light">Data Analyst</h4>
+                <p class="text-tech-gray font-mono text-sm mt-1">True Stories Podcast</p>
+              </div>
+              <div
+                class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
+                <i class="ph ph-calendar"></i> Feb 2024 - May 2024
+              </div>
+            </div>
+            <ul class="space-y-3 text-tech-gray text-sm">
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-gray mt-0.5"></i>
+                <span>Analyzed listener engagement data to identify behavior trends and retention patterns</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-gray mt-0.5"></i>
+                <span>Cleaned and structured datasets using Excel for accurate analysis</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="ph ph-caret-right text-tech-gray mt-0.5"></i>
+                <span>Contributed insights to improve audience engagement and content strategy</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="opacity-0 animate-fade-in-up delay-400 scroll-mt-28">
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+        <i class="ph ph-folders text-tech-purple"></i> <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Featured Project</span>
+      </h3>
+
+      <div class="glass-card group hover:bg-tech-card/60">
+        <div class="flex flex-col md:flex-row justify-between items-start pb-4 border-b border-white/10 mb-4">
+          <div>
+            <h4 class="text-xl font-bold text-tech-light flex flex-wrap text-glow items-center gap-2">
+              Dynamic Portfolio Generator
+              <span
+                class="text-[9px] sm:text-[10px] uppercase font-bold bg-amber-500/10 text-amber-500 px-2.5 py-1 rounded-full border border-amber-500/20 animate-pulse ml-1 whitespace-nowrap flex items-center">
+                <i class="ph-fill ph-warning-circle mr-1"></i> Under Development
+              </span>
+              <a href="https://dynamic-portfolio-va17.onrender.com/"
+                class="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity text-tech-blue pl-1">
+                <i class="ph ph-arrow-up-right"></i>
+              </a>
+            </h4>
+            <p class="text-tech-gray font-mono text-xs mt-2 uppercase tracking-widest pl-1">Full-Stack Website</p>
+          </div>
+          <div class="flex flex-wrap justify-start md:justify-end gap-2 mt-3 md:mt-0 md:max-w-[60%]">
+            <span
+              class="skill-tag relative group/badge cursor-help border-[#eab308]/30 hover:border-[#eab308]/50 hover:bg-[#eab308]/10 hover:text-[#eab308]">
+              JavaScript
+              <div
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#eab308]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(234,179,8,0.2)]">
+                Handled DOM manipulation and dynamic template rendering.
+                <div
+                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#eab308]/50 rotate-45">
+                </div>
+              </div>
+            </span>
+            <span
+              class="skill-tag relative group/badge cursor-help border-[#3b82f6]/30 hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#3b82f6]">
+              HTML/CSS
+              <div
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#3b82f6]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                Built fully responsive, modular front-end architecture.
+                <div
+                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#3b82f6]/50 rotate-45">
+                </div>
+              </div>
+            </span>
+            <span class="skill-tag relative group/badge cursor-help">
+              Node.js
+              <div
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-tech-blue/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[-5px_0_15px_rgba(56,189,248,0.2)]">
+                Handled core backend server architecture and async processing.
+                <div
+                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-tech-blue/50 rotate-45">
+                </div>
+              </div>
+            </span>
+            <span class="skill-tag relative group/badge cursor-help">
+              Express.js
+              <div
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-tech-purple/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[5px_0_15px_rgba(168,85,247,0.2)]">
+                Managed dynamic routing logic and structured form middleware.
+                <div
+                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-tech-purple/50 rotate-45">
+                </div>
+              </div>
+            </span>
+            <span
+              class="skill-tag relative group/badge cursor-help border-[#22c55e]/30 hover:border-[#22c55e]/50 hover:bg-[#22c55e]/10 hover:text-[#22c55e]">
+              Form API
+              <div
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#22c55e]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
+                Capture and persistent storage for user data payloads.
+                <div
+                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#22c55e]/50 rotate-45">
+                </div>
+              </div>
             </span>
           </div>
-
-          <div class="flex flex-wrap gap-3 mt-2">
-            <a href="https://www.linkedin.com/in/peehu14/" class="px-4 py-2 bg-tech-card hover:bg-tech-card/80 border border-white/10 rounded-lg flex items-center gap-2 transition-all">
-              <i class="ph ph-linkedin-logo text-tech-blue"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Peehuhere" class="px-4 py-2 bg-tech-card hover:bg-tech-card/80 border border-white/10 rounded-lg flex items-center gap-2 transition-all">
-              <i class="ph ph-github-logo text-tech-light"></i> GitHub
-            </a>
-            <a href="/resume.pdf" download class="px-4 py-2 bg-tech-card hover:bg-tech-card/80 border border-white/10 rounded-lg flex items-center gap-2 transition-all">
-              <i class="ph ph-download-simple text-tech-purple"></i> Resume
-            </a>
-          </div>
-        </div>
-        
-        <!-- Image Slot -->
-        <div id="hero-avatar-container" class="flex-shrink-0 flex items-center justify-center w-48 h-48 md:w-64 md:h-64 relative">
-          <div id="hero-avatar" class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-tech-blue/30 overflow-hidden glass-card p-1 flex items-center justify-center bg-tech-dark group hover:border-tech-purple/50 z-[60]">
-            <div class="absolute inset-0 bg-gradient-to-tr from-tech-blue/10 to-tech-purple/10 animate-pulse rounded-full z-0"></div>
-            
-            <!-- Profile Image -->
-            <img src="/profile.jpg" alt="Peehu's Profile" class="w-full h-full object-cover rounded-full relative z-10 shadow-[0_0_15px_rgb(var(--color-blue)/0.3)] group-hover:shadow-[0_0_25px_rgb(var(--color-purple)/0.5)] transition-all duration-500 transform group-hover:scale-105" />
-          </div>
         </div>
 
-      </section>
+        <ul class="space-y-3 text-tech-gray text-sm list-none">
+          <li class="flex items-start gap-2">
+            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
+            <span>Built a full-stack application using Node.js and Express.js to dynamically generate personalized
+              portfolio websites</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
+            <span>Implemented username-based routing to serve unique user-specific pages without manual
+              deployment</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
+            <span>Designed structured input system to capture and map user data into dynamic templates
+              efficiently</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
+            <span>Developed backend architecture including request handling, routing flows, and server-side
+              rendering</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
+            <span>Focused on modular code design to improve scalability, maintainability, and system organization</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
+            <span>Deployed application and identified performance bottlenecks; currently redesigning architecture for
+              improved scalability</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <!-- Summary -->
-      <section id="overview" class="opacity-0 animate-fade-in-up delay-100 scroll-mt-28">
+    <!-- Grid for Education and Achievements -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 opacity-0 animate-fade-in-up delay-[500ms]">
+
+      <!-- Achievements -->
+      <div>
         <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="ph ph-terminal-window text-tech-blue"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Overview</span>
+          <i class="ph ph-trophy text-tech-blue"></i> <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Achievements</span>
         </h3>
-        <div class="glass-card flex flex-col overflow-hidden group hover:border-tech-blue/30 transition-colors">
-          <!-- Window Header Controls -->
-          <div class="flex items-center gap-2 border-b border-white/5 pb-3 mb-4">
-            <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-            <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-            <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
-            <span class="text-xs font-mono text-tech-gray/50 ml-2">about_me.js</span>
+        <div class="glass-card h-[calc(100%-3.5rem)] flex flex-col gap-4">
+          <div
+            class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-tech-blue/30 transition-colors">
+            <i class="ph ph-star-four text-tech-blue flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-tech-gray">Selected for Microsoft Office Visit based on performance in HackWithIndia
+            </p>
           </div>
-          <!-- Window Content -->
-          <div class="font-mono text-sm md:text-[15px] p-2 text-tech-gray leading-relaxed tracking-tight group-hover:text-tech-light transition-colors duration-500 overflow-x-auto">
-            <span class="text-tech-purple italic">const</span> <span class="text-tech-light">developer</span> = {
-            <div class="pl-6 space-y-3 my-2 border-l border-tech-darker/50">
-              <div><span class="text-tech-blue">role</span>: <span class="text-[#a6e22e]">"Aspiring Software Engineer"</span>,</div>
-              
-              <div><span class="text-tech-blue">focus</span>: [
-                <div class="pl-4"><span class="text-[#a6e22e]">"Data Structures & Algorithms for strong problem solving"</span>,</div>
-                <div class="pl-4"><span class="text-[#a6e22e]">"Backend development and application logic"</span>,</div>
-                <div class="pl-4"><span class="text-[#a6e22e]">"Understanding how systems work internally"</span></div>
-              ],</div>
-              
-              <div><span class="text-tech-blue">development</span>: [
-                <div class="pl-4"><span class="text-[#a6e22e]">"Building responsive and structured user interfaces"</span>,</div>
-                <div class="pl-4"><span class="text-[#a6e22e]">"Working with server-side logic and request handling"</span>,</div>
-                <div class="pl-4"><span class="text-[#a6e22e]">"Writing clean, readable, and maintainable code"</span></div>
-              ],</div>
-              
-              <div><span class="text-tech-blue">learning</span>: [
-                <div class="pl-4"><span class="text-[#a6e22e]">"Improving problem-solving through consistent practice"</span>,</div>
-                <div class="pl-4"><span class="text-[#a6e22e]">"Exploring scalable application design"</span>,</div>
-                <div class="pl-4"><span class="text-[#a6e22e]">"Strengthening core CS fundamentals"</span></div>
-              ],</div>
-              
-              <div class="hidden md:block"><span class="text-tech-blue">currentWork</span>: <span class="text-[#a6e22e]">"Developing a dynamic portfolio generator using backend-driven architecture"</span></div>
-              
-              <div class="block md:hidden"><span class="text-tech-blue">currentWork</span>: <br><span class="pl-4 text-[#a6e22e]">"Developing a dynamic portfolio generator using backend-driven architecture"</span></div>
+          <div
+            class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-tech-purple/30 transition-colors">
+            <i class="ph ph-rocket text-tech-purple flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-tech-gray">Built and deployed full-stack portfolio generation platform handling
+              dynamic user data</p>
+          </div>
+          <div
+            class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-tech-blue/30 transition-colors">
+            <i class="ph ph-brain text-tech-blue flex-shrink-0 mt-1"></i>
+            <p class="text-sm text-tech-gray">Demonstrated strong problem-solving ability through consistent work in DSA
+              and backend development</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+          <i class="ph ph-graduation-cap text-tech-purple"></i> <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Education</span>
+        </h3>
+        <div class="glass-card h-[calc(100%-3.5rem)] flex flex-col justify-between">
+
+          <div class="mb-6 relative pl-4 border-l border-tech-purple/30">
+            <div class="absolute w-2 h-2 bg-tech-purple rounded-full -left-[4.5px] top-1.5"></div>
+            <div class="flex justify-between items-start mb-1">
+              <h4 class="font-bold text-tech-light">Institute of Information Technology and Management</h4>
+              <p class="text-xs text-tech-gray font-mono px-2 py-0.5 bg-white/5 rounded">2024 - 2028</p>
             </div>
-            };
+            <p class="text-sm text-tech-gray">B.Tech in Computer Science Engineering</p>
           </div>
-        </div>
-      </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="opacity-0 animate-fade-in-up delay-200 scroll-mt-28">
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="ph ph-code text-tech-purple"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Technical Arsenal</span>
-        </h3>
-        
+          <div class="mb-6 relative pl-4 border-l border-tech-purple/30">
+            <div class="absolute w-2 h-2 bg-tech-purple/60 rounded-full -left-[4.5px] top-1.5"></div>
+            <div class="flex justify-between items-start mb-1">
+              <h4 class="font-bold text-tech-light">Sam International School, Dwarka</h4>
+              <p class="text-xs text-tech-gray font-mono px-2 py-0.5 bg-white/5 rounded">2022 - 2024</p>
+            </div>
+            <p class="text-sm text-tech-gray">Class XII (Non-Medical) — <span
+                class="text-tech-blue font-bold">81%</span></p>
+          </div>
+
+          <div class="relative pl-4 border-l border-tech-purple/30">
+            <div class="absolute w-2 h-2 bg-tech-purple/30 rounded-full -left-[4.5px] top-1.5"></div>
+            <div class="flex justify-between items-start mb-1">
+              <h4 class="font-bold text-tech-light">Sam International School, Dwarka</h4>
+              <p class="text-xs text-tech-gray font-mono px-2 py-0.5 bg-white/5 rounded">2021 - 2022</p>
+            </div>
+            <p class="text-sm text-tech-gray">Class X — <span class="text-tech-blue font-bold">85%</span></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect With Me Section -->
+    <section id="contact" class="opacity-0 animate-fade-in-up delay-[600ms] mb-8 scroll-mt-28">
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+        <i class="ph ph-link text-tech-blue"></i> <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Connect With Me</span>
+      </h3>
+
+      <div class="glass-card flex flex-wrap justify-center gap-8 py-8 px-6 text-tech-light">
+        <a href="tel:+919891019397"
+          class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
+          <div
+            class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-tech-blue/50 group-hover:text-tech-blue transition-colors">
+            <i class="ph ph-phone text-2xl"></i>
+          </div>
+          <span class="font-mono text-sm text-tech-gray">Phn No</span>
+        </a>
+
+        <a href="mailto:pihus1412@gmail.com"
+          class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
+          <div
+            class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-tech-purple/50 group-hover:text-tech-purple transition-colors">
+            <i class="ph ph-envelope-simple text-2xl"></i>
+          </div>
+          <span class="font-mono text-sm text-tech-gray">Email Me</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/peehu14/"
+          class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
+          <div
+            class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-[#0077b5] group-hover:text-[#0077b5] transition-colors">
+            <i class="ph ph-linkedin-logo text-2xl"></i>
+          </div>
+          <span class="font-mono text-sm text-tech-gray">LinkedIn</span>
+        </a>
+
+        <a href="https://www.instagram.com/@peehuuhh"
+          class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
+          <div
+            class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-[#E1306C] group-hover:text-[#E1306C] transition-colors">
+            <i class="ph ph-instagram-logo text-2xl"></i>
+          </div>
+          <span class="font-mono text-sm text-tech-gray">Instagram</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Send a Message Section -->
+    <section class="opacity-0 animate-fade-in-up delay-[700ms] mb-8">
+      <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+        <i class="ph ph-paper-plane-tilt text-tech-purple"></i> <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Drop a Message</span>
+      </h3>
+
+      <form action="mailto:pihus1412@gmail.com" method="post" enctype="text/plain"
+        class="glass-card flex flex-col gap-6 py-8 px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="glass-card flex flex-col gap-4">
-            <h4 class="font-mono text-tech-blue text-sm border-b border-white/10 pb-2">Languages & Web</h4>
-            <div class="flex flex-wrap gap-6 mt-2 justify-center sm:justify-start">
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-javascript-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">JavaScript</span>
-              </div>
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-cplusplus-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">C++</span>
-              </div>
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-c-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">C</span>
-              </div>
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-python-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">Python</span>
-              </div>
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-html5-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">HTML5</span>
-              </div>
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-css3-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">CSS3</span>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-2 mt-2 pt-4 border-t border-white/5">
-                <span class="skill-tag">Responsive Design</span>
-            </div>
-          </div>
-          
-          <div class="glass-card flex flex-col gap-4">
-            <h4 class="font-mono text-tech-purple text-sm border-b border-white/10 pb-2">Backend & Core Concept</h4>
-            <div class="flex flex-wrap gap-6 mt-2 justify-center sm:justify-start">
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-nodejs-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">Node.js</span>
-              </div>
-              <div class="flex flex-col items-center gap-2 group bg-tech-light/10 w-16 h-16 rounded-xl flex items-center justify-center hover:bg-tech-light/20 transition-colors cursor-default drop-shadow-md">
-                <i class="devicon-express-original text-tech-light text-4xl group-hover:-translate-y-1 transition-transform"></i>
-              </div>
-              <div class="flex flex-col items-center gap-2 group">
-                <i class="devicon-mysql-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-                <span class="text-xs text-tech-gray font-mono">SQL</span>
-              </div>
-            </div>
-            
-            <div class="flex flex-wrap gap-2 mt-2 pt-4 border-t border-white/5">
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">Server-side Logic</span>
-                <span class="skill-tag">DSA</span>
-                <span class="skill-tag">DBMS</span>
-                <span class="skill-tag">OOPs</span>
-            </div>
-          </div>
-
-          <div class="glass-card flex flex-col gap-4">
-            <h4 class="font-mono text-tech-gray text-sm border-b border-white/10 pb-2">Tools & Practices</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">GitHub</span>
-              <span class="skill-tag">Version Control</span>
-              <span class="skill-tag">Time & Space Complexity</span>
-            </div>
-          </div>
-
-          <div class="glass-card flex flex-col gap-4">
-            <h4 class="font-mono text-tech-light text-sm border-b border-white/10 pb-2">Soft Skills</h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-tag flex items-center gap-1.5"><i class="ph-fill ph-users text-tech-purple transition-colors"></i> Leadership</span>
-              <span class="skill-tag flex items-center gap-1.5"><i class="ph-fill ph-lightbulb text-tech-blue transition-colors"></i> Problem Solving</span>
-              <span class="skill-tag flex items-center gap-1.5"><i class="ph-fill ph-chart-line-up text-tech-purple transition-colors"></i> Adaptability</span>
-              <span class="skill-tag flex items-center gap-1.5"><i class="ph-fill ph-handshake text-tech-blue transition-colors"></i> Collaboration</span>
-              <span class="skill-tag flex items-center gap-1.5"><i class="ph-fill ph-speaker-high text-tech-purple transition-colors"></i> Communication</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Work Experience -->
-      <section id="experience" class="opacity-0 animate-fade-in-up delay-300 scroll-mt-28">
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="ph ph-briefcase text-tech-blue"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Experience</span>
-        </h3>
-        
-        <div class="relative pl-6 space-y-12">
-          <!-- Timeline Vertical Line -->
-          <div class="timeline-line"></div>
-
-          <!-- Yuga Yatra -->
-          <div class="relative">
-            <div class="timeline-dot"></div>
-            <div class="glass-card ml-2">
-              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                <div>
-                  <h4 class="text-xl font-bold text-tech-light">Software Engineering Intern & HR Intern</h4>
-                  <p class="text-tech-blue font-mono text-sm mt-1">Yuga Yatra</p>
-                </div>
-                <div class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
-                  <i class="ph ph-calendar"></i> Apr 2026 - Present
-                </div>
-              </div>
-              <ul class="space-y-3 text-tech-gray text-sm">
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
-                  <span>Contributed to backend logic, routing mechanisms, and application workflow structuring</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
-                  <span>Worked with Express.js for request handling and improving system flow efficiency</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
-                  <span>Collaborated in cross-functional teams to enhance coordination and execution</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-blue mt-0.5"></i>
-                  <span>Gained exposure to real-world development practices and structured problem solving</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- HackWithIndia -->
-          <div class="relative">
-            <div class="timeline-dot"></div>
-            <div class="glass-card ml-2">
-              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                <div>
-                  <h4 class="text-xl font-bold text-tech-light">Junior Web Developer</h4>
-                  <p class="text-tech-purple font-mono text-sm mt-1">HackWithIndia</p>
-                </div>
-                <div class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
-                  <i class="ph ph-calendar"></i> Sept 2024 - Jan 2025
-                </div>
-              </div>
-              <ul class="space-y-3 text-tech-gray text-sm">
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
-                  <span>Developed responsive web interfaces using HTML and CSS ensuring cross-device compatibility</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
-                  <span>Implemented layout systems using Flexbox and CSS Grid for structured UI design</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
-                  <span>Improved UI consistency through better spacing, alignment, and visual hierarchy</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-purple mt-0.5"></i>
-                  <span>Debugged cross-browser issues to ensure consistent rendering</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- True Stories Podcast -->
-          <div class="relative">
-            <div class="timeline-dot"></div>
-            <div class="glass-card ml-2">
-              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                <div>
-                  <h4 class="text-xl font-bold text-tech-light">Data Analyst</h4>
-                  <p class="text-tech-gray font-mono text-sm mt-1">True Stories Podcast</p>
-                </div>
-                <div class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
-                  <i class="ph ph-calendar"></i> Feb 2024 - May 2024
-                </div>
-              </div>
-              <ul class="space-y-3 text-tech-gray text-sm">
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-gray mt-0.5"></i>
-                  <span>Analyzed listener engagement data to identify behavior trends and retention patterns</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-gray mt-0.5"></i>
-                  <span>Cleaned and structured datasets using Excel for accurate analysis</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i class="ph ph-caret-right text-tech-gray mt-0.5"></i>
-                  <span>Contributed insights to improve audience engagement and content strategy</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="opacity-0 animate-fade-in-up delay-400 scroll-mt-28">
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="ph ph-folders text-tech-purple"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Featured Project</span>
-        </h3>
-        
-        <div class="glass-card group hover:bg-tech-card/60">
-          <div class="flex flex-col md:flex-row justify-between items-start pb-4 border-b border-white/10 mb-4">
-            <div>
-              <h4 class="text-xl font-bold text-tech-light flex flex-wrap text-glow items-center gap-2">
-                Dynamic Portfolio Generator
-                <span class="text-[9px] sm:text-[10px] uppercase font-bold bg-amber-500/10 text-amber-500 px-2.5 py-1 rounded-full border border-amber-500/20 animate-pulse ml-1 whitespace-nowrap flex items-center">
-                  <i class="ph-fill ph-warning-circle mr-1"></i> Under Development
-                </span>
-                <a href="https://dynamic-portfolio-va17.onrender.com/" class="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity text-tech-blue pl-1">
-                  <i class="ph ph-arrow-up-right"></i>
-                </a>
-              </h4>
-              <p class="text-tech-gray font-mono text-xs mt-2 uppercase tracking-widest pl-1">Full-Stack Website</p>
-            </div>
-            <div class="flex flex-wrap justify-start md:justify-end gap-2 mt-3 md:mt-0 md:max-w-[60%]">
-              <span class="skill-tag relative group/badge cursor-help border-[#eab308]/30 hover:border-[#eab308]/50 hover:bg-[#eab308]/10 hover:text-[#eab308]">
-                JavaScript
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#eab308]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(234,179,8,0.2)]">
-                  Handled DOM manipulation and dynamic template rendering.
-                  <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#eab308]/50 rotate-45"></div>
-                </div>
-              </span>
-              <span class="skill-tag relative group/badge cursor-help border-[#3b82f6]/30 hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#3b82f6]">
-                HTML/CSS
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#3b82f6]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                  Built fully responsive, modular front-end architecture.
-                  <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#3b82f6]/50 rotate-45"></div>
-                </div>
-              </span>
-              <span class="skill-tag relative group/badge cursor-help">
-                Node.js
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-tech-blue/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[-5px_0_15px_rgba(56,189,248,0.2)]">
-                  Handled core backend server architecture and async processing.
-                  <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-tech-blue/50 rotate-45"></div>
-                </div>
-              </span>
-              <span class="skill-tag relative group/badge cursor-help">
-                Express.js
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-tech-purple/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[5px_0_15px_rgba(168,85,247,0.2)]">
-                  Managed dynamic routing logic and structured form middleware.
-                  <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-tech-purple/50 rotate-45"></div>
-                </div>
-              </span>
-              <span class="skill-tag relative group/badge cursor-help border-[#22c55e]/30 hover:border-[#22c55e]/50 hover:bg-[#22c55e]/10 hover:text-[#22c55e]">
-                Form API
-                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#22c55e]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
-                  Capture and persistent storage for user data payloads.
-                  <div class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#22c55e]/50 rotate-45"></div>
-                </div>
-              </span>
-            </div>
-          </div>
-          
-          <ul class="space-y-3 text-tech-gray text-sm list-none">
-            <li class="flex items-start gap-2">
-              <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-              <span>Built a full-stack application using Node.js and Express.js to dynamically generate personalized portfolio websites</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-              <span>Implemented username-based routing to serve unique user-specific pages without manual deployment</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-              <span>Designed structured input system to capture and map user data into dynamic templates efficiently</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-              <span>Developed backend architecture including request handling, routing flows, and server-side rendering</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-              <span>Focused on modular code design to improve scalability, maintainability, and system organization</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-              <span>Deployed application and identified performance bottlenecks; currently redesigning architecture for improved scalability</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Grid for Education and Achievements -->
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-8 opacity-0 animate-fade-in-up delay-[500ms]">
-        
-        <!-- Achievements -->
-        <div>
-          <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-            <i class="ph ph-trophy text-tech-blue"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Achievements</span>
-          </h3>
-          <div class="glass-card h-[calc(100%-3.5rem)] flex flex-col gap-4">
-            <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-tech-blue/30 transition-colors">
-              <i class="ph ph-star-four text-tech-blue flex-shrink-0 mt-1"></i>
-              <p class="text-sm text-tech-gray">Selected for Microsoft Office Visit based on performance in HackWithIndia</p>
-            </div>
-            <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-tech-purple/30 transition-colors">
-              <i class="ph ph-rocket text-tech-purple flex-shrink-0 mt-1"></i>
-              <p class="text-sm text-tech-gray">Built and deployed full-stack portfolio generation platform handling dynamic user data</p>
-            </div>
-            <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-tech-blue/30 transition-colors">
-              <i class="ph ph-brain text-tech-blue flex-shrink-0 mt-1"></i>
-              <p class="text-sm text-tech-gray">Demonstrated strong problem-solving ability through consistent work in DSA and backend development</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Education -->
-        <div>
-          <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-            <i class="ph ph-graduation-cap text-tech-purple"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Education</span>
-          </h3>
-          <div class="glass-card h-[calc(100%-3.5rem)] flex flex-col justify-between">
-            
-            <div class="mb-6 relative pl-4 border-l border-tech-purple/30">
-              <div class="absolute w-2 h-2 bg-tech-purple rounded-full -left-[4.5px] top-1.5"></div>
-              <div class="flex justify-between items-start mb-1">
-                <h4 class="font-bold text-tech-light">Institute of Information Technology and Management</h4>
-                <p class="text-xs text-tech-gray font-mono px-2 py-0.5 bg-white/5 rounded">2024 - 2028</p>
-              </div>
-              <p class="text-sm text-tech-gray">B.Tech in Computer Science Engineering</p>
-            </div>
-
-            <div class="mb-6 relative pl-4 border-l border-tech-purple/30">
-              <div class="absolute w-2 h-2 bg-tech-purple/60 rounded-full -left-[4.5px] top-1.5"></div>
-              <div class="flex justify-between items-start mb-1">
-                <h4 class="font-bold text-tech-light">Sam International School, Dwarka</h4>
-                <p class="text-xs text-tech-gray font-mono px-2 py-0.5 bg-white/5 rounded">2022 - 2024</p>
-              </div>
-              <p class="text-sm text-tech-gray">Class XII (Non-Medical) — <span class="text-tech-blue font-bold">81%</span></p>
-            </div>
-
-            <div class="relative pl-4 border-l border-tech-purple/30">
-              <div class="absolute w-2 h-2 bg-tech-purple/30 rounded-full -left-[4.5px] top-1.5"></div>
-              <div class="flex justify-between items-start mb-1">
-                <h4 class="font-bold text-tech-light">Sam International School, Dwarka</h4>
-                <p class="text-xs text-tech-gray font-mono px-2 py-0.5 bg-white/5 rounded">2021 - 2022</p>
-              </div>
-              <p class="text-sm text-tech-gray">Class X — <span class="text-tech-blue font-bold">85%</span></p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-      
-      <!-- Connect With Me Section -->
-      <section id="contact" class="opacity-0 animate-fade-in-up delay-[600ms] mb-8 scroll-mt-28">
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="ph ph-link text-tech-blue"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Connect With Me</span>
-        </h3>
-        
-        <div class="glass-card flex flex-wrap justify-center gap-8 py-8 px-6 text-tech-light">
-          <a href="tel:+919891019397" class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
-            <div class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-tech-blue/50 group-hover:text-tech-blue transition-colors">
-              <i class="ph ph-phone text-2xl"></i>
-            </div>
-            <span class="font-mono text-sm text-tech-gray">Phn No</span>
-          </a>
-          
-          <a href="mailto:pihus1412@gmail.com" class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
-            <div class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-tech-purple/50 group-hover:text-tech-purple transition-colors">
-              <i class="ph ph-envelope-simple text-2xl"></i>
-            </div>
-            <span class="font-mono text-sm text-tech-gray">Email Me</span>
-          </a>
-          
-          <a href="https://www.linkedin.com/in/peehu14/" class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
-            <div class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-[#0077b5] group-hover:text-[#0077b5] transition-colors">
-              <i class="ph ph-linkedin-logo text-2xl"></i>
-            </div>
-            <span class="font-mono text-sm text-tech-gray">LinkedIn</span>
-          </a>
-          
-          <a href="https://www.instagram.com/@peehuuhh" class="flex flex-col items-center gap-3 group hover:-translate-y-1 transition-transform">
-            <div class="w-14 h-14 rounded-full bg-tech-dark flex items-center justify-center border border-white/10 group-hover:border-[#E1306C] group-hover:text-[#E1306C] transition-colors">
-              <i class="ph ph-instagram-logo text-2xl"></i>
-            </div>
-            <span class="font-mono text-sm text-tech-gray">Instagram</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- Send a Message Section -->
-      <section class="opacity-0 animate-fade-in-up delay-[700ms] mb-8">
-        <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <i class="ph ph-paper-plane-tilt text-tech-purple"></i> <span class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Drop a Message</span>
-        </h3>
-        
-        <form action="mailto:pihus1412@gmail.com" method="post" enctype="text/plain" class="glass-card flex flex-col gap-6 py-8 px-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex flex-col gap-2">
-              <label class="text-tech-gray font-mono text-sm" for="name">Name</label>
-              <input type="text" id="name" name="Name" required placeholder="Your full name" class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-blue/50 transition-colors placeholder:text-tech-gray/50">
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="text-tech-gray font-mono text-sm" for="email">Email</label>
-              <input type="email" id="email" name="Email" required placeholder="you@domain.com" class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-blue/50 transition-colors placeholder:text-tech-gray/50">
-            </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-tech-gray font-mono text-sm" for="name">Name</label>
+            <input type="text" id="name" name="Name" required placeholder="Your full name"
+              class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-blue/50 transition-colors placeholder:text-tech-gray/50">
           </div>
           <div class="flex flex-col gap-2">
-            <label class="text-tech-gray font-mono text-sm" for="contact">Contact No</label>
-            <input type="text" id="contact" name="Contact No" placeholder="+91 1234567890" class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-blue/50 transition-colors placeholder:text-tech-gray/50">
+            <label class="text-tech-gray font-mono text-sm" for="email">Email</label>
+            <input type="email" id="email" name="Email" required placeholder="you@domain.com"
+              class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-blue/50 transition-colors placeholder:text-tech-gray/50">
           </div>
-          <div class="flex flex-col gap-2">
-            <label class="text-tech-gray font-mono text-sm" for="message">Message</label>
-            <textarea id="message" name="Message" rows="5" required placeholder="Let's build something awesome..." class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-purple/50 transition-colors resize-none placeholder:text-tech-gray/50"></textarea>
-          </div>
-          <button type="submit" class="w-full md:w-auto self-start mt-2 px-8 py-3 bg-tech-blue/10 hover:bg-tech-blue/20 border border-tech-blue/50 rounded-lg text-tech-blue font-semibold flex items-center justify-center gap-2 transition-all">
-            <i class="ph ph-paper-plane-right text-lg"></i> Send to Email
-          </button>
-        </form>
-      </section>
-      
-      <footer class="pt-8 pb-4 border-t border-white/10 text-center text-tech-gray text-sm flex flex-col items-center justify-center gap-2">
-        <p>Built with <i class="ph-fill ph-heart text-tech-purple transition-colors"></i> using HTML, CSS, JS & Tailwind</p>
-        <p class="font-mono text-xs opacity-75">© 2026 Peehu. All rights reserved.</p>
-      </footer>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-tech-gray font-mono text-sm" for="contact">Contact No</label>
+          <input type="text" id="contact" name="Contact No" placeholder="+91 1234567890"
+            class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-blue/50 transition-colors placeholder:text-tech-gray/50">
+        </div>
+        <div class="flex flex-col gap-2">
+          <label class="text-tech-gray font-mono text-sm" for="message">Message</label>
+          <textarea id="message" name="Message" rows="5" required placeholder="Let's build something awesome..."
+            class="bg-tech-darker border border-white/10 rounded-lg px-4 py-3 text-tech-light focus:outline-none focus:border-tech-purple/50 transition-colors resize-none placeholder:text-tech-gray/50"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full md:w-auto self-start mt-2 px-8 py-3 bg-tech-blue/10 hover:bg-tech-blue/20 border border-tech-blue/50 rounded-lg text-tech-blue font-semibold flex items-center justify-center gap-2 transition-all">
+          <i class="ph ph-paper-plane-right text-lg"></i> Send to Email
+        </button>
+      </form>
+    </section>
 
-    </main>
+    <footer
+      class="pt-8 pb-4 border-t border-white/10 text-center text-tech-gray text-sm flex flex-col items-center justify-center gap-2">
+      <p>Built with <i class="ph-fill ph-heart text-tech-purple transition-colors"></i> using HTML, CSS, JS & Tailwind
+      </p>
+      <p class="font-mono text-xs opacity-75">© 2026 Peehu. All rights reserved.</p>
+    </footer>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>

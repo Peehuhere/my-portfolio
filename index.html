@@ -19,20 +19,20 @@
 
   <!-- Floating Navbar -->
   <nav id="main-nav"
-    class="fixed top-4 md:top-6 left-1/2 transform -translate-x-1/2 z-40 bg-transparent border border-transparent rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center justify-center gap-3 sm:gap-6 w-max opacity-0 animate-fade-in-up delay-200 transition-all duration-300">
+    class="floating-nav fixed top-4 md:top-6 z-40 bg-transparent border border-transparent rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center justify-center gap-3 sm:gap-6 opacity-0 animate-fade-in-up delay-200 transition-all duration-300">
     <a href="#overview"
-      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span
+      class="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span
         class="hidden sm:inline">Overview</span><span class="sm:hidden">Intro</span></a>
     <a href="#skills"
-      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors">Skills</a>
+      class="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors">Skills</a>
     <a href="#experience"
-      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span
+      class="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors"><span
         class="hidden sm:inline">Experience</span><span class="sm:hidden">Exp.</span></a>
     <a href="#projects"
-      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors"><span
+      class="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-purple transition-colors"><span
         class="hidden sm:inline">Projects</span><span class="sm:hidden">Proj.</span></a>
     <a href="#contact"
-      class="text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors">Contact</a>
+      class="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-mono text-tech-gray hover:text-tech-blue transition-colors">Contact</a>
   </nav>
 
   <!-- Background Decoration -->
@@ -173,7 +173,7 @@
     <section id="skills" class="opacity-0 animate-fade-in-up delay-200 scroll-mt-28">
       <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
         <i class="ph ph-code text-tech-purple"></i> <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Technical Arsenal</span>
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Technical Skills</span>
       </h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,6 +184,11 @@
               <i
                 class="devicon-javascript-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
               <span class="text-xs text-tech-gray font-mono">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-java-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">Java</span>
             </div>
             <div class="flex flex-col items-center gap-2 group">
               <i
@@ -203,45 +208,56 @@
             <div class="flex flex-col items-center gap-2 group">
               <i
                 class="devicon-html5-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-              <span class="text-xs text-tech-gray font-mono">HTML5</span>
+              <span class="text-xs text-tech-gray font-mono">HTML</span>
             </div>
             <div class="flex flex-col items-center gap-2 group">
               <i
                 class="devicon-css3-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-              <span class="text-xs text-tech-gray font-mono">CSS3</span>
+              <span class="text-xs text-tech-gray font-mono">CSS</span>
             </div>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-2 pt-4 border-t border-white/5">
-            <span class="skill-tag">Responsive Design</span>
           </div>
         </div>
 
         <div class="glass-card flex flex-col gap-4">
-          <h4 class="font-mono text-tech-purple text-sm border-b border-white/10 pb-2">Backend & Core Concept</h4>
+          <h4 class="font-mono text-tech-purple text-sm border-b border-white/10 pb-2">Frontend & Backend</h4>
           <div class="flex flex-wrap gap-6 mt-2 justify-center sm:justify-start">
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-react-original colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">React</span>
+            </div>
             <div class="flex flex-col items-center gap-2 group">
               <i
                 class="devicon-nodejs-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
               <span class="text-xs text-tech-gray font-mono">Node.js</span>
             </div>
-            <div
-              class="flex flex-col items-center gap-2 group bg-tech-light/10 w-16 h-16 rounded-xl flex items-center justify-center hover:bg-tech-light/20 transition-colors cursor-default drop-shadow-md">
+            <div class="flex flex-col items-center gap-2 group">
               <i
-                class="devicon-express-original text-tech-light text-4xl group-hover:-translate-y-1 transition-transform"></i>
+                class="devicon-express-original text-tech-light text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">Express.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card flex flex-col gap-4">
+          <h4 class="font-mono text-tech-blue text-sm border-b border-white/10 pb-2">Databases & Concepts</h4>
+          <div class="flex flex-wrap gap-6 mt-2 justify-center sm:justify-start">
+            <div class="flex flex-col items-center gap-2 group">
+              <i
+                class="devicon-mongodb-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
+              <span class="text-xs text-tech-gray font-mono">MongoDB</span>
             </div>
             <div class="flex flex-col items-center gap-2 group">
               <i
                 class="devicon-mysql-plain colored text-4xl group-hover:-translate-y-1 transition-transform cursor-default drop-shadow-md"></i>
-              <span class="text-xs text-tech-gray font-mono">SQL</span>
+              <span class="text-xs text-tech-gray font-mono">MySQL / SQL</span>
             </div>
           </div>
-
           <div class="flex flex-wrap gap-2 mt-2 pt-4 border-t border-white/5">
             <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">Server-side Logic</span>
             <span class="skill-tag">DSA</span>
             <span class="skill-tag">DBMS</span>
-            <span class="skill-tag">OOPs</span>
+            <span class="skill-tag">OOP</span>
           </div>
         </div>
 
@@ -295,7 +311,7 @@
               </div>
               <div
                 class="flex items-center gap-2 text-tech-gray text-sm mt-2 md:mt-0 px-3 py-1 bg-tech-dark rounded-full border border-white/5">
-                <i class="ph ph-calendar"></i> Apr 2026 - Present
+                <i class="ph ph-calendar"></i> Apr 2026 - June 2026
               </div>
             </div>
             <ul class="space-y-3 text-tech-gray text-sm">
@@ -392,113 +408,85 @@
     <section id="projects" class="opacity-0 animate-fade-in-up delay-400 scroll-mt-28">
       <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3">
         <i class="ph ph-folders text-tech-purple"></i> <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Featured Project</span>
+          class="bg-clip-text text-transparent bg-gradient-to-r from-tech-light to-tech-gray">Featured Projects</span>
       </h3>
 
-      <div class="glass-card group hover:bg-tech-card/60">
-        <div class="flex flex-col md:flex-row justify-between items-start pb-4 border-b border-white/10 mb-4">
-          <div>
-            <h4 class="text-xl font-bold text-tech-light flex flex-wrap text-glow items-center gap-2">
-              Dynamic Portfolio Generator
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+        <article class="glass-card group hover:bg-tech-card/60 flex flex-col min-w-0">
+          <div class="pb-4 border-b border-white/10 mb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <h4 class="text-xl font-bold text-tech-light text-glow">Dynamic Portfolio Generator</h4>
               <span
-                class="text-[9px] sm:text-[10px] uppercase font-bold bg-amber-500/10 text-amber-500 px-2.5 py-1 rounded-full border border-amber-500/20 animate-pulse ml-1 whitespace-nowrap flex items-center">
+                class="text-[10px] uppercase font-bold bg-amber-500/10 text-amber-500 px-2.5 py-1 rounded-full border border-amber-500/20 whitespace-nowrap">
                 <i class="ph-fill ph-warning-circle mr-1"></i> Under Development
               </span>
-              <a href="https://dynamic-portfolio-va17.onrender.com/"
-                class="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity text-tech-blue pl-1">
-                <i class="ph ph-arrow-up-right"></i>
-              </a>
-            </h4>
-            <p class="text-tech-gray font-mono text-xs mt-2 uppercase tracking-widest pl-1">Full-Stack Website</p>
+            </div>
+            <p class="text-tech-gray font-mono text-xs mt-2 uppercase tracking-widest">Backend-driven platform</p>
           </div>
-          <div class="flex flex-wrap justify-start md:justify-end gap-2 mt-3 md:mt-0 md:max-w-[60%]">
-            <span
-              class="skill-tag relative group/badge cursor-help border-[#eab308]/30 hover:border-[#eab308]/50 hover:bg-[#eab308]/10 hover:text-[#eab308]">
-              JavaScript
-              <div
-                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#eab308]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(234,179,8,0.2)]">
-                Handled DOM manipulation and dynamic template rendering.
-                <div
-                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#eab308]/50 rotate-45">
-                </div>
-              </div>
-            </span>
-            <span
-              class="skill-tag relative group/badge cursor-help border-[#3b82f6]/30 hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-[#3b82f6]">
-              HTML/CSS
-              <div
-                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#3b82f6]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                Built fully responsive, modular front-end architecture.
-                <div
-                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#3b82f6]/50 rotate-45">
-                </div>
-              </div>
-            </span>
-            <span class="skill-tag relative group/badge cursor-help">
-              Node.js
-              <div
-                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-tech-blue/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[-5px_0_15px_rgba(56,189,248,0.2)]">
-                Handled core backend server architecture and async processing.
-                <div
-                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-tech-blue/50 rotate-45">
-                </div>
-              </div>
-            </span>
-            <span class="skill-tag relative group/badge cursor-help">
-              Express.js
-              <div
-                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-tech-purple/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[5px_0_15px_rgba(168,85,247,0.2)]">
-                Managed dynamic routing logic and structured form middleware.
-                <div
-                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-tech-purple/50 rotate-45">
-                </div>
-              </div>
-            </span>
-            <span
-              class="skill-tag relative group/badge cursor-help border-[#22c55e]/30 hover:border-[#22c55e]/50 hover:bg-[#22c55e]/10 hover:text-[#22c55e]">
-              Form API
-              <div
-                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-tech-darker border border-[#22c55e]/50 text-xs text-tech-light text-center opacity-0 translate-y-2 pointer-events-none group-hover/badge:opacity-100 group-hover/badge:translate-y-0 transition-all duration-300 z-20 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
-                Capture and persistent storage for user data payloads.
-                <div
-                  class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-tech-darker border-b border-r border-[#22c55e]/50 rotate-45">
-                </div>
-              </div>
-            </span>
+          <p class="text-tech-gray text-sm leading-relaxed">Uses user-submitted data, request handling, routing, and server-side rendering to generate dynamic portfolio pages.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
           </div>
-        </div>
+          <div class="flex flex-wrap gap-3 mt-auto pt-6">
+            <a href="#" data-link-placeholder="github" title="Replace with the repository URL"
+              class="px-3 py-2 bg-tech-dark hover:bg-tech-dark/70 border border-white/10 rounded-lg flex items-center gap-2 text-sm text-tech-light transition-colors">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="https://dynamic-portfolio-va17.onrender.com/" target="_blank" rel="noopener noreferrer"
+              class="px-3 py-2 bg-tech-blue/10 hover:bg-tech-blue/20 border border-tech-blue/30 rounded-lg flex items-center gap-2 text-sm text-tech-blue transition-colors">
+              <i class="ph ph-arrow-up-right"></i> Live Demo
+            </a>
+          </div>
+        </article>
 
-        <ul class="space-y-3 text-tech-gray text-sm list-none">
-          <li class="flex items-start gap-2">
-            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-            <span>Built a full-stack application using Node.js and Express.js to dynamically generate personalized
-              portfolio websites</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-            <span>Implemented username-based routing to serve unique user-specific pages without manual
-              deployment</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-            <span>Designed structured input system to capture and map user data into dynamic templates
-              efficiently</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-            <span>Developed backend architecture including request handling, routing flows, and server-side
-              rendering</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-            <span>Focused on modular code design to improve scalability, maintainability, and system organization</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <i class="ph ph-check-circle text-tech-purple mt-0.5"></i>
-            <span>Deployed application and identified performance bottlenecks; currently redesigning architecture for
-              improved scalability</span>
-          </li>
-        </ul>
+        <article class="glass-card group hover:bg-tech-card/60 flex flex-col min-w-0">
+          <div class="pb-4 border-b border-white/10 mb-4">
+            <h4 class="text-xl font-bold text-tech-light text-glow">Memo</h4>
+            <p class="text-tech-gray font-mono text-xs mt-2 uppercase tracking-widest">Backend messaging</p>
+          </div>
+          <p class="text-tech-gray text-sm leading-relaxed">Backend-focused messaging application built with Node.js and Express for handling requests and server-side message processing.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-auto pt-6">
+            <a href="https://github.com/Peehuhere/memo.git" data-link-placeholder="github" title="Replace with the repository URL"
+              class="px-3 py-2 bg-tech-dark hover:bg-tech-dark/70 border border-white/10 rounded-lg flex items-center gap-2 text-sm text-tech-light transition-colors">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="https://memo-orq7.onrender.com" data-link-placeholder="live-demo" title="Replace with the deployed demo URL"
+              class="px-3 py-2 bg-tech-blue/10 hover:bg-tech-blue/20 border border-tech-blue/30 rounded-lg flex items-center gap-2 text-sm text-tech-blue transition-colors">
+              <i class="ph ph-arrow-up-right"></i> Live Demo
+            </a>
+          </div>
+        </article>
+
+        <article class="glass-card group hover:bg-tech-card/60 flex flex-col min-w-0">
+          <div class="pb-4 border-b border-white/10 mb-4">
+            <h4 class="text-xl font-bold text-tech-light text-glow">Movie Finder</h4>
+            <p class="text-tech-gray font-mono text-xs mt-2 uppercase tracking-widest">Movie discovery app</p>
+          </div>
+          <p class="text-tech-gray text-sm leading-relaxed">React-based movie discovery application featuring 150+ movies with dynamic search, popular searches, and genre-based filtering.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">CSS</span>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-auto pt-6">
+            <a href="https://github.com/Peehuhere/movie-finder" data-link-placeholder="github" title="Replace with the repository URL"
+              class="px-3 py-2 bg-tech-dark hover:bg-tech-dark/70 border border-white/10 rounded-lg flex items-center gap-2 text-sm text-tech-light transition-colors">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="https://moviefinder-pied-six.vercel.app/" data-link-placeholder="live-demo" title="Replace with the deployed demo URL"
+              class="px-3 py-2 bg-tech-blue/10 hover:bg-tech-blue/20 border border-tech-blue/30 rounded-lg flex items-center gap-2 text-sm text-tech-blue transition-colors">
+              <i class="ph ph-arrow-up-right"></i> Live Demo
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -657,11 +645,20 @@
       </form>
     </section>
 
-    <footer
-      class="pt-8 pb-4 border-t border-white/10 text-center text-tech-gray text-sm flex flex-col items-center justify-center gap-2">
-      <p>Built with <i class="ph-fill ph-heart text-tech-purple transition-colors"></i> using HTML, CSS, JS & Tailwind
-      </p>
-      <p class="font-mono text-xs opacity-75">© 2026 Peehu. All rights reserved.</p>
+    <footer class="portfolio-footer" id="page-footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+      <div class="footer-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="footer-main">
+        <p class="footer-code font-mono" aria-hidden="true">&lt;/&gt;</p>
+        <p class="footer-closing">Let's build something cool<span>.</span></p>
+        <button class="footer-top-button" type="button" aria-label="Back to top">
+          <span>Back to top</span>
+          <i class="ph ph-arrow-up" aria-hidden="true"></i>
+        </button>
+      </div>
+      <p class="footer-copyright font-mono">© 2026 Peehu · All rights reserved.</p>
     </footer>
 
   </main>

@@ -4,6 +4,20 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    "fixed",
+    "top-4",
+    "right-4",
+    "md:top-6",
+    "md:right-8",
+    "w-16",
+    "h-16",
+    "md:w-20",
+    "md:h-20",
+    "border-2",
+    "shadow-[0_0_20px_rgba(56,189,248,0.5)]",
+    "cursor-pointer",
+  ],
   theme: {
     extend: {
       colors: {

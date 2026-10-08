@@ -73,17 +73,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Sticky Flying Avatar using FLIP Animation
     const heroAvatar = document.getElementById('hero-avatar');
+    const avatarHome = heroAvatar?.parentElement;
     let isAvatarSticky = false;
 
-    window.addEventListener('scroll', () => {
+    const updateAvatarPosition = () => {
         if (!heroAvatar) return;
         const threshold = 180;
+
+        if (!window.matchMedia('(min-width: 768px)').matches) {
+            if (isAvatarSticky) {
+                isAvatarSticky = false;
+                heroAvatar.classList.add('w-48', 'h-48', 'md:w-64', 'md:h-64', 'border-4');
+                heroAvatar.classList.remove('fixed', 'top-4', 'right-4', 'md:top-6', 'md:right-8', 'w-16', 'h-16', 'md:w-20', 'md:h-20', 'border-2', 'shadow-[0_0_20px_rgba(56,189,248,0.5)]', 'cursor-pointer');
+                avatarHome.appendChild(heroAvatar);
+                heroAvatar.style.transition = '';
+                heroAvatar.style.transform = '';
+                heroAvatar.style.transformOrigin = '';
+            }
+            return;
+        }
         
         if (window.scrollY > threshold && !isAvatarSticky) {
             isAvatarSticky = true;
             
             // First: Grab initial bounding box
             const first = heroAvatar.getBoundingClientRect();
+            document.body.appendChild(heroAvatar);
             
             // Last: Apply classes
             heroAvatar.classList.remove('w-48', 'h-48', 'md:w-64', 'md:h-64', 'border-4');
@@ -118,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Last
             heroAvatar.classList.add('w-48', 'h-48', 'md:w-64', 'md:h-64', 'border-4');
             heroAvatar.classList.remove('fixed', 'top-4', 'right-4', 'md:top-6', 'md:right-8', 'w-16', 'h-16', 'md:w-20', 'md:h-20', 'border-2', 'shadow-[0_0_20px_rgba(56,189,248,0.5)]', 'cursor-pointer');
+            avatarHome.appendChild(heroAvatar);
             
             // Invert & Play
             requestAnimationFrame(() => {
@@ -137,7 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         }
-    });
+    };
+
+    window.addEventListener('scroll', updateAvatarPosition);
+    window.addEventListener('resize', updateAvatarPosition);
 
     // Make avatar click scroll back to top if sticky
     if (heroAvatar) {
@@ -147,6 +166,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const portfolioFooter = document.getElementById('page-footer');
+    const footerTopButton = portfolioFooter?.querySelector('.footer-top-button');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (portfolioFooter && !reduceMotion.matches) {
+        portfolioFooter.addEventListener('pointermove', (event) => {
+            const bounds = portfolioFooter.getBoundingClientRect();
+            portfolioFooter.style.setProperty('--glow-x', `${event.clientX - bounds.left}px`);
+            portfolioFooter.style.setProperty('--glow-y', `${event.clientY - bounds.top}px`);
+        }, { passive: true });
+    }
+
+    footerTopButton?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    });
 
     // 4. Animated Skill Bars (Disabled/Replaced by devicons but keeping observer for future use)
     const skillBars = document.querySelectorAll('.fill-bar');
